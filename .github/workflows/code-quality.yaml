@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
-      - run: uv run pytest -v --duration=0 --cov --cov-report=term-missing
+      - run: uv run pytest -v --duration=0 --cov --cov-report=report.xml
 
   build:
     runs-on: ubuntu-latest
