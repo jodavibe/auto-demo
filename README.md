@@ -6,4 +6,4 @@ Metrics for the test coverage are currently published via an integration to http
 
 [![codecov](https://codecov.io/github/jodavibe/auto-demo/graph/badge.svg?token=486BJ60FLV)](https://codecov.io/github/jodavibe/auto-demo)
 
-https://codecov.io/github/jodavibe/auto-demo/graphs/tree.svg?token=486BJ60FLV
+[![codecov](https://codecov.io/github/jodavibe/auto-demo/graphs/tree.svg?token=486BJ60FLV)](https://codecov.io/github/jodavibe/auto-demo/)
