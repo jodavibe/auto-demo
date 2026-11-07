@@ -2,5 +2,5 @@ def main() -> None:
     print("Hello from auto-demo!")
 
 
-def generate_list() -> list[str]:
-    return 42
+def generate_list() -> list[int]:
+    return [42]
