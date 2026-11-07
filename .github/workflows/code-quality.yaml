@@ -38,18 +38,16 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1 
       - uses: ./.github/actions/setup
-      - run: |
-          uv run pytest -v --cov --cov-report=xml
-          uv run pytest --cov --junitxml=junit.xml -o junit_family=legacy
+      - run: uv run pytest -v --cov --cov-report=xml --junitxml=junit.xml -o junit_family=legacy
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 #v7.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-      - name: Upload test results to Codecov
-        if: ${{ !cancelled() }}
-        uses: codecov/test-results-action@0fa95f0e1eeaafde2c782583b36b28ad0d8c77d3 #v1.2.1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      # - name: Upload test results to Codecov
+      #   if: ${{ !cancelled() }}
+      #   uses: codecov/test-results-action@0fa95f0e1eeaafde2c782583b36b28ad0d8c77d3 #v1.2.1
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
 
   build:
     runs-on: ubuntu-latest
