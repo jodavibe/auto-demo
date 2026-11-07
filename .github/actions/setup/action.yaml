@@ -7,3 +7,6 @@ runs:
       uses: astral-sh/setup-uv@v10.3.3
       with:
         version: '0.4.19'
+
+    - run: uv sync
+      shell: bash
